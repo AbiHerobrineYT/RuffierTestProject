@@ -93,7 +93,7 @@ class TestWin(QWidget):
         self.txt_timer.setFont(QFont("Times", 36, QFont.Bold))
         self.txt_timer.setStyleSheet("color: rgb(0, 0, 0)")
         if time.toString("hh:mm:ss") == "00:00:00":
-            self.timertest2.stop()
+            self.timertest.stop()
 
     def timerfinal(self):
         global time
@@ -106,7 +106,7 @@ class TestWin(QWidget):
         else:
             self.txt_timer.setStyleSheet("color: rgb(0, 0, 0)")
         if time.toString("hh:mm:ss") == "00:00:00":
-            self.timertest3.stop()
+            self.timertest.stop()
 
     def timer_test(self):
         global time

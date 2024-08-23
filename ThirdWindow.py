@@ -16,6 +16,7 @@ class FinalWin(QWidget):
         self.move(win_x, win_y)
 
     def result(self):
+        print (self.exp.age)
         self.index=(4*(self.exp.t1 + self.exp.t2 + self.exp.t3)-200)/10
         if self.exp.age >= 15:
             if self.index >= 15:
@@ -28,7 +29,7 @@ class FinalWin(QWidget):
                 return txt_res4
             elif self.index < 0.5:
                 return txt_res5
-        if self.exp.age >= 13 or self.exp.age <= 14:
+        elif self.exp.age >= 13 and self.exp.age <= 14:
             if self.index >= 16.5:
                 return txt_res1
             elif self.index < 16.5 and self.index >= 12.5:
@@ -39,7 +40,7 @@ class FinalWin(QWidget):
                 return txt_res4
             elif self.index < 2:
                 return txt_res5
-        if self.exp.age >= 11 or self.exp.age <= 12:
+        elif self.exp.age >= 11 and self.exp.age <= 12:
             if self.index >= 18:
                 return txt_res1
             elif self.index < 18 and self.index >= 14:
@@ -50,7 +51,7 @@ class FinalWin(QWidget):
                 return txt_res4
             elif self.index < 3.5:
                 return txt_res5
-        if self.exp.age >= 9 or self.exp.age <= 10:
+        elif self.exp.age >= 9 and self.exp.age <= 10:
             if self.index >= 19.5:
                 return txt_res1
             elif self.index < 19.5 and self.index >= 15.5:
@@ -61,7 +62,7 @@ class FinalWin(QWidget):
                 return txt_res4
             elif self.index < 5:
                 return txt_res5
-        if self.exp.age >= 7 or self.exp.age <= 8:
+        elif self.exp.age >= 7 and self.exp.age <= 8:
             if self.index >= 21:
                 return txt_res1
             elif self.index < 21 and self.index >= 17:
@@ -72,7 +73,7 @@ class FinalWin(QWidget):
                 return txt_res4
             elif self.index < 6.5:
                 return txt_res5
-        else:
+        elif self.exp.age < 7:
             return 'Age is too young!'
             
     def initUI(self):
